@@ -1,0 +1,150 @@
+PDS_VERSION_ID                = PDS3                                          
+DATA_SET_ID                   = "GO-J-MAG-3-RDR-HIGHRES-V1.0"                 
+STANDARD_DATA_PRODUCT_ID      = "MAG LPW EPHIO COORDS"                        
+PRODUCT_ID                    = "ORB14_EUR_EPHIO"                             
+PRODUCT_TYPE                  = DATA                                          
+PRODUCT_VERSION_ID            = "3"                                           
+PRODUCT_CREATION_TIME         = 2019-10-01T07:48:39                           
+                                                                              
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 96                                            
+FILE_RECORDS                  = 9805                                          
+                                                                              
+START_TIME                    = 1998-03-29T13:05:37.663                       
+STOP_TIME                     = 1998-03-29T14:00:13.328                       
+SPACECRAFT_CLOCK_START_COUNT  = "1/04409474:90:0:0"                           
+SPACECRAFT_CLOCK_STOP_COUNT   = "1/04409528:89:5:0"                           
+                                                                              
+INSTRUMENT_HOST_NAME          = "GALILEO ORBITER"                             
+INSTRUMENT_HOST_ID            = "GO"                                          
+MISSION_PHASE_NAME            = "EUROPA 14 ENCOUNTER"                         
+ORBIT_NUMBER                  = 14                                            
+TARGET_NAME                   = {"JUPITER", "EUROPA"}                         
+OBSERVATION_ID                = "E14-EUR"                                     
+INSTRUMENT_NAME               = "TRIAXIAL FLUXGATE MAGNETOMETER"              
+INSTRUMENT_ID                 = "MAG"                                         
+DESCRIPTION                   = "                                             
+      Galileo calibrated MAG high-resolution magnetic field and trajectory    
+      data from the Europa 14 orbit Europa flyby recording in Europa          
+      Phi-Omega (EPHIO) coordinates.  The data cover 1998-03-29T13:05:00 to   
+      1998-03-29T14:00:00."                                                   
+                                                                              
+^TABLE                        = "ORB14_EUR_EPHIO.TAB"                         
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT          = ASCII                                         
+  ROWS                        = 9805                                          
+  COLUMNS                     = 8                                             
+  ROW_BYTES                   = 96                                            
+  DESCRIPTION                 = "                                             
+      This ASCII table contains MAG and trajectory data in Europa             
+      Phi-Omega (EPHIO) coordinates.  In EPHIO coordinates X is in the        
+      direction of corotational flow (System III Phi). Z is parallel to the   
+      Jovian spin axis (Omega). Y completes the right handed set. The basis   
+      vectors are fixed at the time of Europa closest approach                
+      (1998-03-29 13:21:06). Positions are given in units of Europa radii     
+      where RE = 1560 km."                                                    
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "SPACECRAFT EVENT TIME"                       
+    COLUMN_NUMBER             = 1                                             
+    UNIT                      = "N/A"                                         
+    DATA_TYPE                 = TIME                                          
+    START_BYTE                = 1                                             
+    BYTES                     = 23                                            
+    DESCRIPTION               = "                                             
+      Spacecraft event time of the sample. This time corresponds to the       
+      'CORRECTED TIME' given in the Galileo MAG survey data set. Time is      
+      given in PDS format: yyyy-mm-ddThh:mm:ss.sss. The individual            
+      elements of the time field can be read using the format                 
+      (i4,4(1x,i2),1x,f6.3) yr, mon, day, hr, min, sec."                      
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BX"                                          
+    COLUMN_NUMBER             = 2                                             
+    UNIT                      = "nT"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 26                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999999.99                                     
+    DESCRIPTION               = "                                             
+      Corotational field component in EPHIO coordinates."                     
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BY"                                          
+    COLUMN_NUMBER             = 3                                             
+    UNIT                      = "nT"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 36                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999999.99                                     
+    DESCRIPTION               = "                                             
+      Jupiterward field component in EPHIO coordinates."                      
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BZ"                                          
+    COLUMN_NUMBER             = 4                                             
+    UNIT                      = "nT"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 46                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999999.99                                     
+    DESCRIPTION               = "                                             
+      Northward field component in EPHIO coordinates."                        
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "B-FIELD MAGNITUDE"                           
+    COLUMN_NUMBER             = 5                                             
+    UNIT                      = "nT"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 56                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999999.99                                     
+    DESCRIPTION               = "                                             
+      Magnitude of the average B-field components."                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "X"                                           
+    COLUMN_NUMBER             = 6                                             
+    UNIT                      = "SATELLITE RADII"                             
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 66                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999.99999                                     
+    DESCRIPTION               = "                                             
+      Corotational component of the instantaneous spacecraft position with    
+      respect to Europa in units of Europa radii."                            
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "Y"                                           
+    COLUMN_NUMBER             = 7                                             
+    UNIT                      = "SATELLITE RADII"                             
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 76                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999.99999                                     
+    DESCRIPTION               = "                                             
+      Jupiterward component of the instantaneous spacecraft position with     
+      respect to Europa in Europa radii."                                     
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "Z"                                           
+    COLUMN_NUMBER             = 8                                             
+    UNIT                      = "SATELLITE RADII"                             
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 86                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 999.99999                                     
+    DESCRIPTION               = "                                             
+      Northward component of the instantaneous spacecraft position with       
+      respect to Europa in Europa radii."                                     
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           
